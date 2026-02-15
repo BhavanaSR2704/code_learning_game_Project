@@ -1,0 +1,27 @@
+<!DOCTYPE html>  <html>  
+<head>  
+    <title>User Profile | CodeQuest</title>  
+    <link rel="stylesheet" href="/static/style.css">  
+</head>  <body class="profile-page">  <div class="profile-card">  
+    <h2>👤 {{ username }}'s Profile</h2>  <div class="profile-info">  
+    <p><strong>Total Points:</strong> <span id="total-points">0</span></p>  
+    <p><strong>Completed Levels:</strong> <span id="completed-levels">0</span></p>  
+    <p><strong>Language:</strong> <span id="language">Not started</span></p>  
+    <p><strong>Last Challenge:</strong> <span id="last-challenge">None</span></p>  
+</div>  
+
+
+
+<button onclick="window.location.href='/home'" class="back-home">← Back to Home</button>
+
+</div>  <script>  
+    // Load saved values  
+    document.getElementById("total-points").innerText = localStorage.getItem("points") || 0;  
+    document.getElementById("completed-levels").innerText = localStorage.getItem("completed_levels") || 0;  
+    document.getElementById("language").innerText = localStorage.getItem("selected_language") || "Not started";  
+    document.getElementById("last-challenge").innerText = localStorage.getItem("last_challenge") || "None";  
+</script> 
+
+
+</body>  
+</html>

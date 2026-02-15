@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home | CodeQuest</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="home-page">
+
+    <div class="top-banner">
+        <h2>Welcome, {{ username }} 👋</h2>
+        <p>Select a programming language to begin your adventure!</p>
+    </div>
+
+    <div class="language-container">
+
+        <div class="lang-card" onclick="goToLanguage('python')">
+            <img src="/static/assets/python.png">
+            <h3>Python</h3>
+        </div>
+
+        <div class="lang-card" onclick="goToLanguage('java')">
+            <img src="/static/assets/java.png">
+            <h3>Java</h3>
+        </div>
+
+        <div class="lang-card" onclick="goToLanguage('c')">
+            <img src="/static/assets/c.png">
+            <h3>C Language</h3>
+        </div>
+
+    </div>
+
+<script>
+function goToLanguage(lang) {
+    window.location.href = "/dashboard/" + lang;
+}
+</script>
+
+</body>
+</html>

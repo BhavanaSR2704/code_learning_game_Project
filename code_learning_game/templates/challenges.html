@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ language|capitalize }} Challenges</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="challenge-list-page">
+
+    <h1 class="challenge-list-title">{{ language|capitalize }} Challenges</h1>
+
+    <div class="challenge-list-container">
+        {% for lvl in levels %}
+        <div class="challenge-card" onclick="location.href='/challenge/{{ language }}/{{ lvl }}'">
+            <h2>Level {{ lvl }}</h2>
+            <p>Click to start this challenge</p>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

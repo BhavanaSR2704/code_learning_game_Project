@@ -1,0 +1,72 @@
+{
+  "1": {
+    "title": "Print Hello",
+    "description": "Print the text: Hello World",
+    "starter_code": "print()",
+    "expected_output": "Hello World",
+    "hint": "Use the print() function to display text."
+  },
+  "2": {
+    "title": "Add Two Numbers",
+    "description": "Print the sum of 4 and 6.",
+    "starter_code": "",
+    "expected_output": "10",
+    "hint": "Take two variables and assign the values to it and print it."
+  },
+  "3": {
+    "title": "Print Your Name",
+    "description": "Store your name in a variable and print it.",
+    "starter_code": "name = ''\nprint()",
+    "expected_output": "Bhavana",
+    "hint": "Assign your name to a variable and use print()."
+  },
+  "4": {
+    "title": "List Basics",
+    "description": "Print the first item of list [1,2,3,4].",
+    "starter_code": "",
+    "expected_output": "1",
+    "hint": "Lists are zero-indexed. Use list[0]."
+  },
+  "5": {
+    "title": "For Loop",
+    "description": "Print numbers 1 to 5 each on new line.",
+    "starter_code": "",
+    "expected_output": "1\n2\n3\n4\n5",
+    "hint": "Use a for loop with range(1,6)."
+  },
+  "6": {
+    "title": "Function",
+    "description": "Create a function greet() that prints Hello.",
+    "starter_code": "",
+    "expected_output": "Hello",
+    "hint": "Define a function using def and call it."
+  },
+  "7": {
+    "title": "Reverse String",
+    "description": "Print reverse of string 'code'.",
+    "starter_code": "",
+    "expected_output": "edoc",
+    "hint": "Use slicing: string[::-1]."
+  },
+  "8": {
+    "title": "Dictionary",
+    "description": "Print value of key 'age' from {'age':20}.",
+    "starter_code": "",
+    "expected_output": "20",
+    "hint": "Access dictionary values using dict['key']."
+  },
+  "9": {
+    "title": "File Handling",
+    "description": "Write 'hi' into a file and print hi.",
+    "starter_code": "",
+    "expected_output": "hi",
+    "hint": "Use open(), write(), close(), then print."
+  },
+  "10": {
+    "title": "OOP",
+    "description": "Create class A with method fun() that prints OK.",
+    "starter_code": "",
+    "expected_output": "OK",
+    "hint": "Define a class and call its method."
+  }
+}

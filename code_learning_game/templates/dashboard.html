@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard | CodeQuest</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="dashboard-body">
+
+    <div class="dashboard-container">
+        <h2>{{ language | capitalize }} Learning Dashboard</h2>
+        <p class="dash-subtitle">Progress your skills level-by-level 🎯</p>
+
+        <div class="level-box">
+            <h3>Current Level: Beginner</h3>
+            <h3>Points: 0</h3>
+        </div>
+
+        <a href="/levels/{{ language }}" class="start-btn">
+            Start Challenges 🎮
+        </a>
+
+        <button class="back-btn" onclick="window.location.href='/'">
+            ⬅ Back to Login
+        </button>
+    <a href="/profile" class="profile-btn">Profile</a>
+
+    </div>
+
+</body>
+</html>

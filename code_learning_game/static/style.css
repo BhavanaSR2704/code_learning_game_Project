@@ -1,0 +1,494 @@
+/* HOME PAGE */
+.home-page {
+    background: linear-gradient(135deg, #000428, #004e92);
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.top-banner h2 {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.language-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.lang-card {
+    width: 180px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+    transition: 0.4s;
+    cursor: pointer;
+    animation: popUp 0.8s ease;
+}
+
+.lang-card:hover {
+    transform: scale(1.1) rotate(3deg);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lang-card img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popUp {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* LOGIN PAGE STYLE */
+.login-body {
+    background: linear-gradient(135deg, #004e92, #000428);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    width: 350px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: fadeUp 0.8s ease-out;
+}
+
+.login-container h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.login-container input {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-container button {
+    width: 85%;
+    background: #00c6ff;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-container button:hover {
+    transform: scale(1.1);
+    background: #7df9ff;
+}
+
+/* Animation */
+@keyframes fadeUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to   { transform: translateY(0); opacity: 1; }
+}
+/* DASHBOARD PAGE */
+.dashboard-body {
+    background: linear-gradient(135deg, #001510, #004e92);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    width: 380px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    animation: fadeUp 0.9s ease;
+}
+
+.level-box {
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.start-btn {
+    background: #ffdd00;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 90%;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #ffee55;
+    transform: scale(1.05);
+}
+
+.back-btn {
+    background: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 90%;
+    color: #333;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #dddddd;
+    transform: scale(1.05);
+}
+
+.challenge-page {
+    background: #0d0d0d;
+    color: white;
+    font-family: Arial;
+}
+
+.challenge-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00eaff;
+}
+
+.code-area {
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #000;
+    color: #00ffea;
+    font-size: 16px;
+}
+
+.challenge-buttons {
+    margin-top: 20px;
+}
+
+.run-btn, .hint-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.run-btn { background: #00eaff; color: #000; }
+.hint-btn { background: #444; color: #fff; }
+
+.output-box {
+    background: #000;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 50px;
+    color: #00ff00;
+}
+
+.points {
+    margin-top: 20px;
+    font-size: 22px;
+    color: #ffea00;
+}
+
+.challenge-list-page {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 30px;
+}
+
+.challenge-list-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #00eaff;
+}
+
+.challenge-list-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.challenge-card {
+    background: #1a1a1a;
+    width: 280px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #00eaff;
+    transition: transform 0.3s;
+}
+
+.challenge-card:hover {
+    transform: scale(1.05);
+}
+
+.challenge-card h2 {
+    margin-bottom: 10px;
+    color: #00eaff;
+}
+
+.challenge-card p {
+    margin-bottom: 10px;
+}
+
+.difficulty {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.easy { background: #28a745; }
+.medium { background: #ffc107; }
+.hard { background: #dc3545; }
+
+.start-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00eaff;
+    color: #000;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+/* -------------------------------------------
+   CHALLENGE PAGE (CENTER + BIG + BEAUTIFUL)
+---------------------------------------------*/
+.challenge-page {
+    background: linear-gradient(135deg, #000000, #001f3f);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* MAIN CARD */
+.challenge-card {
+    width: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #00eaff;
+    border: 2px solid #00eaff;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    animation: fadeCard 0.8s ease;
+}
+
+/* TITLE */
+.challenge-card h2 {
+    color: #00eaff;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.challenge-card p {
+    color: #ddd;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* CODE BOX */
+#code-area {
+    width: 100%;
+    height: 200px;
+    background: #000;
+    color: #00ffea;
+    border: 2px solid #00eaff;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* RUN BUTTON */
+#run-btn {
+    padding: 12px 25px;
+    background: #00eaff;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+#run-btn:hover {
+    transform: scale(1.08);
+    background: #7ffcff;
+}
+
+/* OUTPUT BOX */
+#output {
+    width: 100%;
+    min-height: 80px;
+    background: black;
+    color: #00ff00;
+    text-align: left;
+    border-radius: 10px;
+    padding: 12px;
+    margin-top: 10px;
+    box-shadow: inset 0 0 10px #00ff00;
+}
+
+/* NEXT BUTTON */
+#next-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ffdd00;
+    color: black;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#next-btn:hover {
+    transform: scale(1.05);
+    background: #ffee55;
+}
+
+/* Animation */
+@keyframes fadeCard {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* THEME TOGGLE */
+body.light-theme {
+    background: linear-gradient(135deg, #ffffff, #e0e0e0);
+    color: black;
+}
+body.dark-theme {
+    background: linear-gradient(135deg, #000428, #004e92);
+    color: white;
+}
+
+/* TIMER */
+#timer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* SUCCESS / FAILURE ANIMATIONS */
+.challenge-card {
+    transition: all 0.3s ease;
+}
+.challenge-card.correct {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 25px #28a745;
+}
+.challenge-card.wrong {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 25px #dc3545;
+}
+
+/* PROFILE PAGE */
+.profile-page {
+    background: linear-gradient(135deg, #000428, #004e92);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.profile-card {
+    width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.8);
+    animation: fadeUp 0.8s ease-out;
+    text-align: center;
+}
+
+.profile-info p {
+    margin: 12px 0;
+    font-size: 18px;
+    color: #e6f7ff;
+}
+
+.back-home {
+    margin-top: 20px;
+    padding: 12px;
+    width: 90%;
+    background: #00eaff;
+    border: none;
+    border-radius: 10px;
+    color: #000;
+    font-size: 18px;
+    cursor: pointer;
+}
+.profile-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+.profile-btn:hover {
+    background-color: #357ABD;
+}

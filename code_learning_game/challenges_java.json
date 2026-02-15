@@ -1,0 +1,62 @@
+{
+  "1": {
+    "title": "Print Hello",
+    "description": "Print Hello World using Java.",
+    "starter_code": "class Main { public static void main(String[] args) { } }",
+    "expected_output": "Hello World"
+  },
+  "2": {
+    "title": "Add Numbers",
+    "description": "Print sum of 4 and 6.",
+    "starter_code": "class Main { public static void main(String[] args) { } }",
+    "expected_output": "10"
+  },
+  "3": {
+    "title": "Your Name",
+    "description": "Store your name in a variable and print it.",
+    "starter_code": "class Main { public static void main(String[] args) { } }",
+    "expected_output": "Bhavana"
+  },
+  "4": {
+    "title": "Array Basics",
+    "description": "Print first element of array {1,2,3,4}.",
+    "starter_code": "class Main { public static void main(String[] args) { } }",
+    "expected_output": "1"
+  },
+  "5": {
+    "title": "Loops",
+    "description": "Print numbers 1 to 5 on new lines.",
+    "starter_code": "",
+    "expected_output": "1\n2\n3\n4\n5"
+  },
+  "6": {
+    "title": "Method",
+    "description": "Create method greet() that prints Hello.",
+    "starter_code": "",
+    "expected_output": "Hello"
+  },
+  "7": {
+    "title": "String Reverse",
+    "description": "Reverse the string 'code'.",
+    "starter_code": "",
+    "expected_output": "edoc"
+  },
+  "8": {
+    "title": "HashMap",
+    "description": "Print value of key age from HashMap {age=20}.",
+    "starter_code": "",
+    "expected_output": "20"
+  },
+  "9": {
+    "title": "File Write",
+    "description": "Write 'hi' to a file and print it.",
+    "starter_code": "",
+    "expected_output": "hi"
+  },
+  "10": {
+    "title": "OOP",
+    "description": "Class A with method fun() that prints OK.",
+    "starter_code": "",
+    "expected_output": "OK"
+  }
+}

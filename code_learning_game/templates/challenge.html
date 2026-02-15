@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Challenges | CodeQuest</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="challenge-page">
+
+<style>
+    /* Centering + Enlarging Challenge Card (This does NOT touch your main style.css) */
+    .challenge-card {
+        width: 60%;
+        margin: 50px auto;
+        padding: 30px;
+        background: #1a1a1a;
+        border-radius: 20px;
+        box-shadow: 0 0 20px #00eaff;
+        text-align: center;
+    }
+
+    #code-area {
+        width: 90%;
+        height: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        background: #000;
+        color: #00ffea;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    #run-btn, #hint-btn, #next-btn {
+        background: #00eaff;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 15px;
+        font-size: 18px;
+        color: #000;
+        font-weight: bold;
+    }
+
+    #hint-btn {
+        background: #444;
+        color: #fff;
+    }
+
+    #next-btn {
+        background: #ffdd00;
+        display: none;
+    }
+
+    #output {
+        background: #000;
+        padding: 15px;
+        border-radius: 10px;
+        width: 90%;
+        margin: 15px auto;
+        color: #00ff00;
+        min-height: 50px;
+        text-align: left;
+    }
+
+    #hint-text {
+        color: #00eaff;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    #points {
+        font-size: 22px;
+        color: #ffdd00;
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="challenge-card">
+
+    <p id="points">Points: 0</p>
+
+    <h2 id="challenge-title"></h2>
+    <p id="challenge-desc"></p>
+
+    <textarea id="code-area" placeholder="Type your code here..."></textarea>
+
+    <br>
+    <button id="run-btn" onclick="runCode()">Run</button>
+    <button id="hint-btn" onclick="showHint()">Hint</button>
+
+    <pre id="output"></pre>
+
+    <button id="next-btn" onclick="goNextLevel()">Next Level →</button>
+
+    <p id="hint-text"></p>
+
+</div>
+
+<script>
+    const language = "{{ language }}";
+    let level = parseInt({{ level }});  
+    let points = 0;
+
+    function loadChallenge() {
+        fetch(`/get-challenge/${language}/${level}`)
+            .then(res => res.json())
+            .then(data => {
+                if (!data) {
+                    document.getElementById("challenge-title").innerText = "🎉 All Levels Completed!";
+                    document.getElementById("challenge-desc").innerText = "Great job!";
+                    return;
+                }
+
+                document.getElementById("challenge-title").innerText = data.title;
+                document.getElementById("challenge-desc").innerText = data.description;
+                document.getElementById("code-area").value = data.starter_code;
+
+                document.getElementById("next-btn").style.display = "none";
+                document.getElementById("output").innerText = "";
+                document.getElementById("hint-text").innerText = "";
+            });
+    }
+
+    function runCode() {
+        const code = document.getElementById("code-area").value;
+
+        fetch("/run-code", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({
+                code: code,
+                language: language,
+                level: level
+            })
+        })
+        .then(res => res.json())
+        .then(result => {
+            document.getElementById("output").innerText = result.output;
+
+            if (result.correct === true) {
+                points += 10;
+                document.getElementById("points").innerText = "Points: " + points;
+                document.getElementById("next-btn").style.display = "block";
+                if (result.correct === true) {
+
+    // Save profile details in browser
+    localStorage.setItem("points", points);
+    localStorage.setItem("completed_levels", level);
+    localStorage.setItem("selected_language", language);
+    localStorage.setItem("last_challenge", data.title);
+
+    document.getElementById("next-btn").style.display = "block";
+}
+
+            }
+        });
+    }
+
+    function showHint() {
+        fetch(`/get-challenge/${language}/${level}`)
+            .then(res => res.json())
+            .then(data => {
+                document.getElementById("hint-text").innerText = "💡 Hint: " + data.hint;
+            });
+    }
+
+    function goNextLevel() {
+        level += 1;
+        window.location.href = `/challenge/${language}/${level}`;
+    }
+
+    loadChallenge();
+</script>
+
+</body>
+</html>
